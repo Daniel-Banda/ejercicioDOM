@@ -19,4 +19,4 @@ git push origin rama
 
 > Vista previa del index
 
-![Index] ()
+![Index] (https://raw.githubusercontent.com/Daniel-Banda/ejercicioDOM/refs/heads/main/Images/Captura%20de%20pantalla%202025-04-08%20104219.png)
