@@ -43,7 +43,28 @@ btnMostrar.addEventListener("click", function (event){
     // lista.item(0).before(element);
     // lista.item(0).prepend(element2);
 
-    lista.item(0).append(element);
-    lista.item(0).after(element2);
+    // lista.item(0).append(element);
+    // lista.item(0).after(element2);
+
+
+    // lista.item(1).insertAdjacentElement("afterbegin", element)
+    // lista.item(1).insertAdjacentElement("beforeend", element2)
+
+    lista.item(1).insertAdjacentHTML("beforebegin",
+        `<li class="list-group-item">Before Begin item</li>`);
+
+    lista.item(1).insertAdjacentHTML("afterend",
+            `<li class="list-group-item">
+            After End item</li>`);
+
+    lista.item(1).insertAdjacentHTML("afterbegin",
+                `<li class="list-group-item">
+                After Begin item</li>`);
+
+    lista.item(1).insertAdjacentHTML("beforeend",
+                    `<li class="list-group-item">
+                    Before End Item</li>`);
+    
+
 
 });
