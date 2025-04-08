@@ -29,9 +29,21 @@ encabezado1.innerHTML += "<em>Ejercicio</em> DOM"; // ___ de la etiqueta que est
 encabezado2.innerText = ++contador 
 }modifica
 
-console.log(encabezado1.innerText);
+// console.log(encabezado1.innerText);
 
 btnMostrar.addEventListener("click", function (event){
     event.preventDefault(); // No hagas lo que haces por defecto
+
+    let element = document.createElement("li");
+    element.innerText="Another item"; 
+    element.classList.add("list-group-item"); 
+
+    let element2 = element.cloneNode(true);
+
+    // lista.item(0).before(element);
+    // lista.item(0).prepend(element2);
+
+    lista.item(0).append(element);
+    lista.item(0).after(element2);
 
 });
