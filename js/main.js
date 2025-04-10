@@ -4,6 +4,9 @@ let btnMostrar = document.getElementById("btnMostrar")
 let encabezado1 = document.getElementById("Encabezado1");
 let encabezado2 = document.getElementById("Encabezado2");
 let lista = document.getElementsByTagName("ul");
+let txtRFC = document.getElementById("txtRFC");
+let txtCURP = document.getElementById("txtCURP");
+let txtTelefono = document.getElementById("txtTelefono");
 
 let elementos = document.getElementsByClassName("list-group-item")
 
@@ -64,7 +67,27 @@ btnMostrar.addEventListener("click", function (event){
     lista.item(1).insertAdjacentHTML("beforeend",
                     `<li class="list-group-item">
                     Before End Item</li>`);
-    
-
-
 });
+
+
+window.addEventListener("load",function(event){
+
+    console.log("Se terminó de cargar la página");
+
+})
+
+function txtToUpper(event){
+    event.preventDefault();
+    event.target.value =event.target.value.trim().toUpperCase();
+
+}
+
+txtRFC.addEventListener("blur", txtToUpper);
+txtCURP.addEventListener("blur", txtToUpper);
+    // txtRFC.value = txtRFC.value.toUpperCase();
+
+txtTelefono.addEventListener("blur", function (event){
+    event.preventDefault();
+    txtTelefono.value = txtTelefono.value.trim().slice(0,10);
+
+})
